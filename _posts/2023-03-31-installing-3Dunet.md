@@ -1,31 +1,48 @@
 ---
-title: "Installing and Running 3DUNet"
+title: "How to run 3DUNet"
 date: 2023-03-31 15:47:42 +0200
 categories: [Tutorial]
 tags: []
 ---
 
-To install and run 3DUNet, you'll need to follow these steps:
 
-1. Clone the needed training scripts to your local machine by running the following command in your terminal:
+# To run 3DUNet, you'll need to follow these steps:
 
-git clone https://github.com/wolny/pytorch-3dunet.git
+1. Copy the pre prepared 3dunet dir :
 
-this is so you can get access to the traing, and testing config files later on. 
+    `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm .`
 
-2. Create a new conda environment with the required dependencies:
+    This dir in theroy should contain the basic things you need to get 3dunet up and training.
+    as well as prepare data for unet to use.   
 
-conda create -n pytorch-3dunet --c pytorch -c nvidia -c conda-forge -c awolny pytorch-3dunet
+2. activate the virtual enviroment :
 
-3. Activate the new environment:
+    `$ source 3dunet-env/bin/activate`
 
-conda activate pytorch-3dunet
+    In this python virtual enviroment you should find all the libraries nesseary to run 3dunet.
+    as well as the bash commands to start training
 
-4. Train a model using the `train3dunet` script:
+3. (optional) :
 
-To train a model, you can run the `train3dunet` script with the provided configuration file:
+    you can have your have this enviroment activate automatically upon logging.
 
-train3dunet --config <CONFIG>
+    first open ~/.bashrc in the editor of your choice. Then add following to the end of your .bashrc
 
-This command will start training a 3DUNet model using the specified configuration file. You can replace `<CONFIG>` with the path to your own configuration file.
+    `source <path-to-3dunet-env>/3dunet-env/bin/activate` 
 
+4. Start model training :
+
+    `$ train3dunet --config <CONFIG>`
+
+    This command will start training a 3DUNet model using a specified training.yaml config file. 
+    Within each config file contains the settings for the models training.
+
+    > The lastest config file I used for training was in 3DUnet_aneurysm - nico 
+
+5. Predict with the model :
+
+    Similar to `train3dunet`, `predict3dunet` requires a test.yaml config file in order to know what to do.
+
+    `$ predict3dunet --config <CONFIG>`
+
+> See the the data prep guide to learn how to give the model custom data. 
