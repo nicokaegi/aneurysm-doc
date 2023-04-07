@@ -1,6 +1,6 @@
 ---
 title: "How to run 3DUNet"
-date: 2023-03-31 15:47:42 +0200
+date: 2023-04-07
 categories: [Tutorial]
 tags: []
 ---
