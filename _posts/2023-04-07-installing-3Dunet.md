@@ -5,44 +5,44 @@ categories: [Tutorial]
 tags: []
 ---
 
+# To prep for 3DUnet 3DUNet you'll need to do follow these steps:
 
-# To run 3DUNet, you'll need to follow these steps:
-
-1. Copy the pre prepared 3dunet dir :
+1. Copy the prepared 3dunet dir if you haven't already:
 
     `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm .`
 
     This dir in theory should contain the basic things you need to get 3dunet up and training.
     as well as prepare data for 3dunet to use.   
 
-2. Activate the virtual environment :
+    > Don't forget to run `source 3dunet-env/bin/activate` to activate the python virtual environment.  
 
-    `$ source 3dunet-env/bin/activate`
+2. Convert a nii dataset to h5 dataset :
 
-    In this python virtual environment you should find all the libraries necessary to run 3dunet.
-    as well as the bash commands to start training
+    Initially the 3dunet-aneurysm dir will have two folders of nii files. base_3d_aorta_scans has the original full dataset, and clean_dir has a subset of the nii files from base_3d_aorta_scans deemed to be cleaner than the rest.   
 
-3. (optional) Auto activate the environment :
+    To make a new h5 dataset for the training scripts. open nii_formatting.py in the editor of your choice and adjust the following variables as needed.
 
-    you can have your have this enviroment activate automatically upon logging.
+    ```python 
+    data_path = './clean_dir' # the dir with the nii files you want to use
+    output_dir = '80_20_64_images' # the dir that you want your finial h5 dataset to be in
+    split = .80 # how much of the finial dataset will be for training or testing
+    size_of_the_output_set = 64 # how many samples you from the original test set you want to be in your final dataset
+    ```
 
-    first open ~/.bashrc in the editor of your choice. Then add following to the end of your .bashrc
+    You then needed to run `python nii_formatting.py` to produce your desired h5 dataset
 
-    `source <path-to-3dunet-env>/3dunet-env/bin/activate` 
+3. Point the training config file to the new data dir :
 
-4. Start model training :
+    Now that you have your h5 dataset you need to adjust your training config file. 
 
-    `$ train3dunet --config <CONFIG>`
+    In your 3dunet-aneurysm dir open `config_files/3DUnet_aneurysm/train_config.yml` in the editor of your choice.
 
-    This command will start training a 3DUNet model using a specified training.yaml config file. 
-    Within each config file contains the settings for the models training.
+    Then do ctrl - f for `train:` to find training data loader subsection, and under `file_paths:` add `- <PATH-TO-YOUR-DATASET>/train/`.
+    
+    you will also need to repeat this for the validation dataloader. 
 
-    > The latest config file I used for training was in 3DUnet_aneurysm - nico 
+    Do ctrl - f for `val:` to find training data loader subsection, and under `file_paths:` add `- <PATH-TO-YOUR-DATASET>/test/`.
 
-5. Predict with the model :
-
-    Similar to `train3dunet`, `predict3dunet` requires a test.yaml config file in order to know what to do.
-
-    `$ predict3dunet --config <CONFIG>`
-
-> See the the data prep guide to learn how to give the model custom data. 
+    When you run the training scripts they will try to load all the data you list in each dir that specify under file_paths. 
+    
+    > They can also do single h5 files if you specify the path down to a single file. 

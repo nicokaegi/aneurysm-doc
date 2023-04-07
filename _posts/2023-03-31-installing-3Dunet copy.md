@@ -6,9 +6,9 @@ tags: []
 ---
 
 
-# To run 3DUNet, you'll need to follow these steps:
+# To run 3DUNet you'll need to do follow these steps:
 
-1. Copy the pre prepared 3dunet dir :
+1. Copy the prepared 3dunet dir :
 
     `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm .`
 
@@ -46,3 +46,4 @@ tags: []
     `$ predict3dunet --config <CONFIG>`
 
 > See the the data prep guide to learn how to give the model custom data. 
+
