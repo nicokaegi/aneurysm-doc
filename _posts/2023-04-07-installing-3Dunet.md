@@ -16,7 +16,7 @@ tags: []
 
     > Don't forget to run `source 3dunet-env/bin/activate` to activate the python virtual environment.  
 
-2. Convert a nii dataset to h5 dataset :
+2. Convert a nii dataset to a h5 dataset :
 
     Initially the 3dunet-aneurysm dir will have two folders of nii files. base_3d_aorta_scans has the original full dataset, and clean_dir has a subset of the nii files from base_3d_aorta_scans deemed to be cleaner than the rest.   
 
