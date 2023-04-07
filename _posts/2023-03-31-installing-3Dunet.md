@@ -12,17 +12,17 @@ tags: []
 
     `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm .`
 
-    This dir in theroy should contain the basic things you need to get 3dunet up and training.
-    as well as prepare data for unet to use.   
+    This dir in theory should contain the basic things you need to get 3dunet up and training.
+    as well as prepare data for 3dunet to use.   
 
-2. activate the virtual enviroment :
+2. Activate the virtual environment :
 
     `$ source 3dunet-env/bin/activate`
 
-    In this python virtual enviroment you should find all the libraries nesseary to run 3dunet.
+    In this python virtual environment you should find all the libraries necessary to run 3dunet.
     as well as the bash commands to start training
 
-3. (optional) :
+3. (optional) Auto activate the environment :
 
     you can have your have this enviroment activate automatically upon logging.
 
@@ -37,7 +37,7 @@ tags: []
     This command will start training a 3DUNet model using a specified training.yaml config file. 
     Within each config file contains the settings for the models training.
 
-    > The lastest config file I used for training was in 3DUnet_aneurysm - nico 
+    > The latest config file I used for training was in 3DUnet_aneurysm - nico 
 
 5. Predict with the model :
 
