@@ -41,8 +41,8 @@ tags: []
     
     you will also need to repeat this for the validation dataloader. 
 
-    Do ctrl - f for `val:` to find training data loader subsection, and under `file_paths:` add `- <PATH-TO-YOUR-DATASET>/test/`.
+    Do ctrl - f for `val:` to find validation data loader subsection, and under `file_paths:` add `- <PATH-TO-YOUR-DATASET>/test/`.
 
     When you run the training scripts they will try to load all the data you list in each dir that specify under file_paths. 
-    
+
     > They can also do single h5 files if you specify the path down to a single file. 
