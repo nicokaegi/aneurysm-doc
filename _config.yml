@@ -41,7 +41,7 @@ social:
   email: kaeginick63@protonmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/nicokaegi # change to your github homepage
+    - http://127.0.0.1:4000/aneurysm-doc/ # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
