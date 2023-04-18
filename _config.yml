@@ -26,13 +26,10 @@ description: >- # used by seo meta and the atom feed
   just some docs put I together for the aneurysm-project
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ""
+url: "https://nicokaegi.github.io/aneurysm-doc/"
 
 github:
-  username: github_username # change to your github username
-
-twitter:
-  username: twitter_username # change to your twitter username
+  username: nicokaegi # change to your github username
 
 social:
   # Change to your full name.
@@ -41,7 +38,7 @@ social:
   email: kaeginick63@protonmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - http://127.0.0.1:4000/aneurysm-doc/ # change to your github homepage
+    - https://nicokaegi.github.io/aneurysm-doc/ # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
