@@ -1,6 +1,6 @@
 ---
 title: "How to prep data for 3DUnet"
-date: 2023-03-31
+date: 2023-03-31 
 categories: [Tutorial]
 tags: []
 ---

@@ -13,7 +13,13 @@ tags: []
     `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm .`
 
     This dir in theory should contain the basic things you need to get 3dunet up and training.
-    as well as prepare data for 3dunet to use.   
+    as well as prepare data for 3dunet to use. 
+
+    > random tip : Since programers are lazy by nature your standard linux terminal has a number of short cuts for you to use. 
+    >  a `.` by its self is bash short hand for this current directory 
+
+    >so `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm .` actually means `$ cp -R /home/kaegin63/aneurysm/3dunet-aneurysm <this current dir>`
+
 
 2. Activate the virtual environment :
 
@@ -46,4 +52,5 @@ tags: []
     `$ predict3dunet --config <CONFIG>`
 
 > See the the data prep guide to learn how to give the model custom data. 
+
 
