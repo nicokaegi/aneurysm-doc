@@ -5,7 +5,7 @@ categories: [Tutorial]
 tags: []
 ---
 
-# To prep for 3DUnet 3DUNet you'll need to do follow these steps:
+# To prep data for 3DUNet you'll need to do follow these steps:
 
 1. Copy the prepared 3dunet dir if you haven't already:
 

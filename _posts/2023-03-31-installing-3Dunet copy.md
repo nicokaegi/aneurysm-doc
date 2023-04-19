@@ -30,7 +30,7 @@ tags: []
 
 3. (optional) Auto activate the environment :
 
-    you can have your have this enviroment activate automatically upon logging.
+    you can have your have this environment activate automatically upon logging.
 
     first open ~/.bashrc in the editor of your choice. Then add following to the end of your .bashrc
 
@@ -45,12 +45,6 @@ tags: []
 
     > The latest config file I used for training was in 3DUnet_aneurysm - nico 
 
-5. Predict with the model :
 
-    Similar to `train3dunet`, `predict3dunet` requires a test.yaml config file in order to know what to do.
-
-    `$ predict3dunet --config <CONFIG>`
-
-> See the the data prep guide to learn how to give the model custom data. 
 
 
