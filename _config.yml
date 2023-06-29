@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   just some docs put I together for the aneurysm-project
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://nicokaegi.github.io"
+url: "https://nicokaegi.github.io/aneurysm-doc/"
 
 github:
   username: nicokaegi # change to your github username
